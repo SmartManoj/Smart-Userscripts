@@ -38,5 +38,5 @@ if (e.ctrlKey && e.key=='.'){
     await sleep(6);
     }
     r();
-    $('#side').prepend($('<input id=mob  value=8807328487 type=text><button onclick=api()>C2C</button> <a style="display:none" id=rt href="https://bit.ly/my3blog">C2C</a>'));
+    $('#side').prepend($('<input id=mob  value= type=text><button onclick=api()>C2C</button> <a style="display:none" id=rt href="https://bit.ly/my3blog">C2C</a>'));
 })();
