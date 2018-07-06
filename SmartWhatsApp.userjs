@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         WhatsApp
-// @namespace    http://tampermonkey.net/
+// @namespace    http://smartmanoj.blogspot.com/2018/07/smart-whatsapp-web.html
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       SmartManoj
 // @match        https://web.whatsapp.com/
 // @grant        none
 // @require https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
