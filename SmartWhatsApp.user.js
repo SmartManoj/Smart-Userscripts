@@ -2,7 +2,7 @@
 // @name         WhatsApp
 // @namespace    http://smartmanoj.blogspot.com/2018/07/smart-whatsapp-web.html
 // @version      0.1
-// @description  try to take over the world!
+// @description  Awesome Whatsapp Features
 // @author       SmartManoj
 // @match        https://web.whatsapp.com/
 // @grant        none
