@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Awesome Whatsapp Features
 // @author       SmartManoj
-// @match        https://web.whatsapp.com/
+// @match        https://web.whatsapp.com/*
 // @grant        none
 // @require https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
