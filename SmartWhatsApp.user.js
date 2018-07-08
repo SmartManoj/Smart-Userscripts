@@ -5,8 +5,8 @@
 // @description  Awesome Whatsapp Features
 // @author       SmartManoj
 // @match        https://web.whatsapp.com/*
-// @grant        none
-// @updateURL    https://rawgit.com/SmartManoj/SmartUserScripts/master/SmartWhatsApp.user.js
+// @grant        GM_addStyle
+// @grant        unsafeWindow
 // @require https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
 
@@ -18,10 +18,18 @@ function sleep(s){
 window.api=function(){
     var e=$('#mob')[0].value;
     if (e.length==10)e='91'+e;
-    rt.href=`https://api.whatsapp.com/send?phone=${e}&text=Hi`
-    rt.click()
+    rt.href=`https://api.whatsapp.com/send?phone=${e}&text=Hi`;
+    rt.click();
 }
-
+window.api2=function(e){
+    e = e || window.event;
+      if(e.key == 'Enter') {
+        window.api();
+    }
+}
+unsafeWindow.api=api;
+unsafeWindow.api2=api2;
+GM_addStyle(".hidden{display:none}");
 function r(){
 console.log('cool');
     document.querySelector('[title="Status"]').remove();
@@ -30,13 +38,21 @@ document.onkeydown=function(e) {
 
 if (e.ctrlKey && e.key=='.'){
     r();
-
+ }
+if (e.altKey && e.key=='c'){
+    $('#c2c').toggleClass('hidden');
  }
 };
 (async function() {
     while(!document.querySelector('[title="Status"]')){
-    await sleep(6);
+    await sleep(2);
     }
     r();
-    $('#side').prepend($('<input id=mob  value= type=text><button onclick=api()>C2C</button> <a style="display:none" id=rt href="https://bit.ly/my3blog">C2C</a>'));
+       $('#side').prepend($(`<div id="c2c" class='hidden'>
+<input id=mob style="width:90%;" onkeydown=api2(event) placeholder="Enter New Mobile Number to Chat" type=text>
+<button  style="top: 7px;position: relative;" onclick=api()><span data-icon="send" class="">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<path fill="#263238" fill-opacity=".45" d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z">
+</path></svg></span></button>
+<a style="display:none" id=rt href="https://bit.ly/my3blog">C2C</a><div>`));
 })();
