@@ -7,7 +7,16 @@
 // @match       https://curl.trillworks.com/#python
 // @updateURL   https://raw.githubusercontent.com/SmartManoj/master/curl2py.user.js
 // @downloadURL https://raw.githubusercontent.com/SmartManoj/master/curl2py.user.js
+// @grant       GM_setClipboard
 // ==/UserScript==
-
-
-alert(2)
+function copy(a){
+	console.log(a);
+	GM_setClipboard(a)
+}
+unsafeWindow.onkeydown=function(e){
+console.log(e.altKey,e.key)
+	if (e.altKey && e.key=='c'){
+		copy(document.querySelector('#generated-code').value+'\nprint(response.text)')
+		
+	}
+}

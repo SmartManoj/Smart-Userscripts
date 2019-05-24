@@ -4,16 +4,19 @@ from pyautogui import *
 from glob import *
 from pyperclip import *
 import re
+author='SmartManoj'
+namespace='https://github.com/SmartManoj'
+
 def local():
 	return f'''// ==UserScript==
 // @name        {name}
 // @version     0.1
 // @description try to take over the world!
-// @author      SmartManoj
-// @namespace   https://github.com/SmartManoj
+// @author      {author}
+// @namespace   {namespace}
 // @match       {link}
-// @updateURL   https://raw.githubusercontent.com/SmartManoj/master/{fn}
-// @downloadURL https://raw.githubusercontent.com/SmartManoj/master/{fn}
+// @updateURL   https://raw.githubusercontent.com/{author}/master/{fn}
+// @downloadURL https://raw.githubusercontent.com/{author}/master/{fn}
 // ==/UserScript==
 
 '''
@@ -22,10 +25,11 @@ def browser():
 // @name        {name}
 // @version     0.1
 // @description try to take over the world!
-// @author      SmartManoj
-// @namespace   https://github.com/SmartManoj
+// @author      {author}
+// @namespace   {namespace}
 // @match       {link}
 // @require   	{local_path}/{fn}
+// @grant       GM_setClipboard
 // ==/UserScript==
 
 
