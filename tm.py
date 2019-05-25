@@ -5,8 +5,8 @@ from glob import *
 from pyperclip import *
 import re
 author='SmartManoj'
-namespace='https://github.com/SmartManoj'
-
+namespace=f'https://github.com/{author}'
+repo='SmartUserScripts'
 def local():
 	return f'''// ==UserScript==
 // @name        {name}
@@ -15,8 +15,8 @@ def local():
 // @author      {author}
 // @namespace   {namespace}
 // @match       {link}
-// @updateURL   https://raw.githubusercontent.com/{author}/master/{fn}
-// @downloadURL https://raw.githubusercontent.com/{author}/master/{fn}
+// @updateURL   https://raw.githubusercontent.com/{author}/{repo}/master/{fn}
+// @downloadURL https://raw.githubusercontent.com/{author}/{repo}/master/{fn}
 // ==/UserScript==
 
 '''
