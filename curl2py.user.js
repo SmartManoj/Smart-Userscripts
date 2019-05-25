@@ -5,8 +5,8 @@
 // @author      SmartManoj
 // @namespace   https://github.com/SmartManoj
 // @match       https://curl.trillworks.com/#python
-// @updateURL   https://raw.githubusercontent.com/SmartManoj/master/curl2py.user.js
-// @downloadURL https://raw.githubusercontent.com/SmartManoj/master/curl2py.user.js
+// @updateURL   https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/raw/master/curl2py.user.js
+// @downloadURL https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/raw/master/curl2py.user.js
 // @grant       GM_setClipboard
 // ==/UserScript==
 function copy(a){
