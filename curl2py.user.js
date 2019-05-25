@@ -14,7 +14,6 @@ function copy(a){
 	GM_setClipboard(a)
 }
 unsafeWindow.onkeydown=function(e){
-console.log(e.altKey,e.key)
 	if (e.altKey && e.key=='c'){
 		copy(document.querySelector('#generated-code').value+'\nprint(response.text)')
 		
