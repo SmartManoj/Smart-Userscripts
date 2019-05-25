@@ -5,8 +5,8 @@
 // @author       SmartManoj
 // @match        http://app.e-box.co.in/*
 // @namespace   https://github.com/SmartManoj
-// @updateURL   https://raw.githubusercontent.com/SmartManoj/master/e-box_enable_copy.user.user.js
-// @downloadURL https://raw.githubusercontent.com/SmartManoj/master/e-box_enable_copy.user.user.js
+// @updateURL   https://raw.githubusercontent.com/SmartManoj/master/e-box_enable_copy.user.js
+// @downloadURL https://raw.githubusercontent.com/SmartManoj/master/e-box_enable_copy.user.js
 // @grant    GM_setClipboard
 // @grant  unsafeWindow
 // @run-at      document-idle
