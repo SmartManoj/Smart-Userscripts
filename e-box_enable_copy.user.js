@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Enable Copy Paste
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       SmartManoj
 // @match        http://app.e-box.co.in/*
@@ -11,7 +11,9 @@
 // @grant  unsafeWindow
 // @run-at      document-idle
 // ==/UserScript==
-
+function sleep(s) {
+  return new Promise(resolve => setTimeout(resolve, 1000*s));
+}
 unsafeWindow.rt=function (){
     rt2.style.display='inline';
     try{
@@ -26,7 +28,7 @@ document.onkeydown=function(e){
     if (e.altKey && e.key=='c')
     {rt()}
 };
-(function() {
+(async function() {
     'use strict';
     
 
@@ -42,6 +44,8 @@ document.addEventListener('cut', allowPaste, true);
 document.addEventListener('copy', allowPaste, true);
 document.addEventListener('paste', allowPaste, true);
 try{
+for(int i=0;i<5 && !pasteTextModal ;i++)
+await sleep(2);
     pasteTextModal.remove();
     copyTextModal.remove();}catch(e){}
     
