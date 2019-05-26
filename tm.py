@@ -15,7 +15,7 @@ def local():
 // @author      {author}
 // @namespace   {namespace}
 // @match       {link}
-// @updateURL   https://raw.githubusercontent.com/{author}/{repo}/raw/master/{fn}
+// @updateURL   https://raw.githubusercontent.com/{author}/{repo}/master/{fn}
 // ==/UserScript==
 
 '''
