@@ -10,6 +10,14 @@
 // @grant  unsafeWindow
 // @run-at      document-idle
 // ==/UserScript==
+
+/*
+^b removecopy paste box
+^e evaluate
+^a submit
+^d validate
+^x compile
+*/
 function sleep(s) {
   return new Promise(resolve => setTimeout(resolve, 1000*s));
 }
@@ -66,3 +74,4 @@ if (e.altKey && e.key =='e'){
         compileOrExecuteProgram("/contestComponent/contestSubmit","",5);jQuery(".ebox-popover").hide();
     }
 }
+
