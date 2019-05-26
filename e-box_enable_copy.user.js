@@ -53,14 +53,14 @@ window.onkeydown=function(e){
     if (e.altKey && e.key =='b')
     {pasteTextModal.remove();
     copyTextModal.remove();}
-    if (e.altKey && e.key =='z'){
+    if (e.altKey && e.key =='x'){
     compileOrExecuteProgram("/contestComponent/processEditorProgram","Compile",3);jQuery(".ebox-popover").hide();
 }
 if (e.altKey && e.key =='e'){
         jQuery('#observations').hide();jQuery('.ebox-popover').hide(); executeButtonClick(); loadPreviousInputs();
     }
-    if (e.altKey && e.key =='v'){
-        Query("#observations").hide();executeSystemTestcaseOnline("/contestComponent/executeEditorProgramForSystemTestcase");jQuery(".ebox-popover").hide();
+    if (e.altKey && e.key =='d'){
+        jQuery("#observations").hide();executeSystemTestcaseOnline("/contestComponent/executeEditorProgramForSystemTestcase");jQuery(".ebox-popover").hide();
     }
     if (e.altKey && e.key =='a'){
         compileOrExecuteProgram("/contestComponent/contestSubmit","",5);jQuery(".ebox-popover").hide();
