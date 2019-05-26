@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         Enable Copy Paste
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       SmartManoj
 // @match        http://app.e-box.co.in/*
 // @namespace   https://github.com/SmartManoj
 // @updateURL   https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/raw/master/e-box_enable_copy.user.js
-// @downloadURL https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/raw/master/e-box_enable_copy.user.js
 // @grant    GM_setClipboard
 // @grant  unsafeWindow
 // @run-at      document-idle
@@ -54,4 +53,16 @@ window.onkeydown=function(e){
     if (e.altKey && e.key =='b')
     {pasteTextModal.remove();
     copyTextModal.remove();}
+    if (e.altKey && e.key =='z'){
+    compileOrExecuteProgram("/contestComponent/processEditorProgram","Compile",3);jQuery(".ebox-popover").hide();
+}
+if (e.altKey && e.key =='e'){
+        jQuery('#observations').hide();jQuery('.ebox-popover').hide(); executeButtonClick(); loadPreviousInputs();
+    }
+    if (e.altKey && e.key =='v'){
+        Query("#observations").hide();executeSystemTestcaseOnline("/contestComponent/executeEditorProgramForSystemTestcase");jQuery(".ebox-popover").hide();
+    }
+    if (e.altKey && e.key =='a'){
+        compileOrExecuteProgram("/contestComponent/contestSubmit","",5);jQuery(".ebox-popover").hide();
+    }
 }
