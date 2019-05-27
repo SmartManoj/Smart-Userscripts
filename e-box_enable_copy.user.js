@@ -29,11 +29,11 @@ copyText();;    rt2.value=clipbordText;
  document.execCommand('copy');rt2.style.display='none';
 GM_setClipboard(clipbordText);console.log(clipbordText);
 }
-$('body').append('<button style="display:none" onclick="rt()">C</button><textarea style="display:none" id=rt2></textarea>');
+$('body').append('<button style="display:none" id=rt3 onclick="rt()">C</button><textarea style="display:none" id=rt2></textarea>');
 document.onkeydown=function(e){
     console.log(e.key);
     if (e.altKey && e.key=='c')
-    {rt()}
+    {rt3.click();}
 };
 (async function() {
     
@@ -67,7 +67,7 @@ window.onkeydown=function(e){
 if (e.altKey && e.key =='e'){
         jQuery('#observations').hide();jQuery('.ebox-popover').hide(); executeButtonClick(); loadPreviousInputs();
     }
-    if (e.altKey && e.key =='d'){
+    if (e.altKey && e.key =='g'){
         jQuery("#observations").hide();executeSystemTestcaseOnline("/contestComponent/executeEditorProgramForSystemTestcase");jQuery(".ebox-popover").hide();
     }
     if (e.altKey && e.key =='a'){
