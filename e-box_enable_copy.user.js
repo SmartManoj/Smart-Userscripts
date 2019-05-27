@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Enable Copy Paste
-// @version      0.5
+// @version      0.6
 // @description  try to take over the world!
 // @author       SmartManoj
 // @match        http://app.e-box.co.in/*
