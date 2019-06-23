@@ -22,10 +22,41 @@
 // @updateURL   https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/master/SO_Lines.user.js
 // ==/UserScript==
 
-var styles = document.createElement('link');
-styles.rel = 'stylesheet';
+var styles = document.createElement('style');
 styles.type = 'text/css';
-styles.href = 'http://mdev.me/SOcln.css';
+styles.innerHTML = `#question pre {
+	position: relative;
+}
+.mdevLinesToggle {
+	top: 2px;
+	right: 2px;
+	width: 20px;
+	color: #111 !important;
+	height: 20px;
+	cursor: pointer !important;
+	font-size: 12px;
+	background: #CCC;
+	line-height: 20px;
+	position: absolute;
+	text-align: center;
+}
+.mdevLineBox {
+	top: 11px;
+	left: 5px;
+	max-width: 40px;
+	position: absolute;
+}
+.mdevLineNo {
+	clear: both;
+	color: #111;
+	padding: 0 5px;
+	display: block;
+	background: #CCC;
+	text-align: right;
+}
+pre.mdevLinesDisabled .mdevLinesToggle, pre.mdevLinesDisabled .mdevLineBox {
+	display: none;
+}`;
 document.querySelector('head').appendChild(styles);
 
 var initLines = function() {
