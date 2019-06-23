@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Enable Copy Paste
-// @version      0.6
+// @version      0.7
 // @description  try to take over the world!
 // @author       SmartManoj
 // @match        http://app.e-box.co.in/*
@@ -26,12 +26,13 @@ unsafeWindow.rt=function (){
     try{
 copyText();;    rt2.value=clipbordText;
     }catch(e){rt2.value=document.querySelector('.editor').innerText}
+    rt2.select();
  document.execCommand('copy');rt2.style.display='none';
-GM_setClipboard(clipbordText);console.log(clipbordText);
+GM_setClipboard(clipbordText);//console.log(clipbordText);
 }
 $('body').append('<button style="display:none" id=rt3 onclick="rt()">C</button><textarea style="display:none" id=rt2></textarea>');
 document.onkeydown=function(e){
-    console.log(e.key);
+    // console.log(e.key);
     if (e.altKey && e.key=='c')
     {rt3.click();}
 };
