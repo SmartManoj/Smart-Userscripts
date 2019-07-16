@@ -11,12 +11,9 @@
 // @match        *://*.askubuntu.com/*
 // @match        *://*.stackapps.com/*
 // @match        *://*.mathoverflow.net/*
-// @match        *://github.com/soscripted/*
-// @match        *://soscripted.github.io/sox/*
 
 // @exclude      *://data.stackexchange.com/*
 // @exclude      *://api.stackexchange.com/*
-
 // @version     7
 // @grant       none
 // @updateURL   https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/master/SO_Lines.user.js
@@ -29,7 +26,7 @@ styles.innerHTML = `#question pre {
 }
 .mdevLinesToggle {
 	top: 2px;
-	right: 2px;
+	right: 15px;
 	width: 20px;
 	color: #111 !important;
 	height: 20px;
