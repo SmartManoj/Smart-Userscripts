@@ -65,9 +65,12 @@ a=`### Is your feature request related to a problem?
 <!-- Add any other context or screenshots about the feature request here. -->`;
     // Your code here...
 else a='';
+sleep(2);
+    console.log('1',issue_body);
 while(!issue_body){
     await sleep(2);
     }
+    console.log(issue_body);
 issue_body.value=a;
 
 })();

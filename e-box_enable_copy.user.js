@@ -30,7 +30,7 @@ copyText();;    rt2.value=clipbordText;
  document.execCommand('copy');rt2.style.display='none';
 GM_setClipboard(clipbordText);//console.log(clipbordText);
 }
-$('body').append('<button style="display:none" id=rt3 onclick="rt()">C</button><textarea style="display:none" id=rt2></textarea>');
+$('body').append(<'button style="display:none" id=rt3 onclick="rt()">C</button><textarea style="display:none" id=rt2></textarea>');
 document.onkeydown=function(e){
     // console.log(e.key);
     if (e.altKey && e.key=='c')
