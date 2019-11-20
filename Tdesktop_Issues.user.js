@@ -7,7 +7,6 @@
 // @match       https://github.com/telegramdesktop/tdesktop/issues/new*
 // @updateURL   https://raw.githubusercontent.com/SmartManoj/SmartUserScripts/master/Tdesktop_Issues.user.js
 // ==/UserScript==
-
 function get_param( name )
 {
   name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -74,3 +73,4 @@ while(!issue_body){
 issue_body.value=a;
 
 })();
+

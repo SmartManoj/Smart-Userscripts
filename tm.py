@@ -36,7 +36,7 @@ def browser():
 '''
 if __name__ == '__main__':
 	hotkey('win','3') # chrome index
-	hotkey('ctrl','shift','h')
+	# hotkey('ctrl','shift','h')
 	sleep(1)
 	hotkey('ctrl','a')
 	hotkey('ctrl','x')
