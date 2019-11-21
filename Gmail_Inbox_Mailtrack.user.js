@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Gmail Inbox Mailtrack
-// @version     0.1
+// @version     0.2
 // @description try to take over the world!
 // @author      SmartManoj
 // @namespace   https://github.com/SmartManoj
@@ -48,7 +48,7 @@ if ( e.key=='c'){
 }
 
 
-if ( e.key=='r'){
+else if ( e.key=='r'){
 
     console.log('MT');
 
