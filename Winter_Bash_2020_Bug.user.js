@@ -17,6 +17,7 @@ var $ = unsafeWindow.jQuery;
 var selector = '.wb-unread-count.indicator-badge';
 
 $(function() {
+    return;
     var checkExist = setInterval(function() {
         if ($(selector).length) {
             console.log("Exists!");
