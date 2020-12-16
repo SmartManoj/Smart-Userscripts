@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Winter Bash 2020 Bug
 // @namespace    https://github.com/SmartManoj/smart-user-scripts
-// @version      0.4
+// @version      0.5
 // @description  https://meta.stackexchange.com/questions/357921/1-new-hat-notification-doesnt-go-away
 // @author       SmartManoj
 // @match        *://*.stackoverflow.com/*
