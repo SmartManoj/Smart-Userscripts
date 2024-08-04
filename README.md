@@ -1,6 +1,6 @@
-# Smart User Scripts
+# Smart Userscripts
 
-Install the following user script manager and click the raw version of a script to directly install it.
+Install the following user script manager and click the raw version of a script to install it directly.
 
 🧑‍💼 User Script Managers: Violent Monkey for [Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) and [User Script Manager for Safari](https://apps.apple.com/us/app/userscripts/id1463298887)
 
