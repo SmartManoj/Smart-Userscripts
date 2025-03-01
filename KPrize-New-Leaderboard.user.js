@@ -35,7 +35,9 @@ function calculateResults(score) {
 
 function updateLeaderboard() {
     score_header = document.querySelector('#site-content > div:nth-child(2) > div > div > div.sc-hxIGLx.hjmoty > div:nth-child(5) > ul > li:nth-child(1) > div > span.sc-eUlrpB.sc-EBWJC.bhRUwc.chGCIC')
-    score_header.insertAdjacentHTML('afterend', '<span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Correct</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Wrong</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Skipped</span>')
+    if (score_header.parentElement.childElementCount==7){
+      score_header.insertAdjacentHTML('afterend', '<span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Correct</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Wrong</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Skipped</span>')
+    }
 
     list = document.querySelector('#site-content > div:nth-child(2) > div > div > div.sc-hxIGLx.hjmoty > div:nth-child(5) > ul')
     totalrows = list.querySelectorAll('li')
@@ -43,7 +45,7 @@ function updateLeaderboard() {
     for (let i = 0; i < totalrows.length; i++) {
         try {
             row = totalrows[i]
-
+            if (row.firstChild.childElementCount!=7)continue
             score= row.querySelector('span:nth-child(4)').innerText
 
             data= calculateResults(score)[0]
