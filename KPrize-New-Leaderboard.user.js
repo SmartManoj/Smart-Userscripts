@@ -7,6 +7,8 @@
 // @author      Smart Manoj
 // @description 3/1/2025, 6:47:20 PM
 // ==/UserScript==
+
+// https://www.kaggle.com/competitions/konwinski-prize/discussion/563798
 function getScore(a, b, c) {
     if (a === 0) {
         return -1.0;
