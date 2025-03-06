@@ -35,7 +35,7 @@ function calculateResults(score) {
 
 function updateLeaderboard() {
     score_header = document.querySelector('#site-content > div:nth-child(2) > div > div > div.sc-hxIGLx.hjmoty > div:nth-child(5) > ul > li:nth-child(1) > div > span.sc-eUlrpB.sc-EBWJC.bhRUwc.chGCIC')
-    if (score_header.parentElement.childElementCount==7){
+    if (score_header.parentElement.childElementCount==6){
       score_header.insertAdjacentHTML('afterend', '<span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Correct</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Wrong</span><span class="sc-eUlrpB sc-eigkBd kxkOnC jkddsd">N Skipped</span>')
     }
 
@@ -45,7 +45,7 @@ function updateLeaderboard() {
     for (let i = 0; i < totalrows.length; i++) {
         try {
             row = totalrows[i]
-            if (row.firstChild.childElementCount!=7)continue
+            if (row.firstChild.childElementCount!=6)continue
             score= row.querySelector('span:nth-child(4)').innerText
 
             data= calculateResults(score)[0]
