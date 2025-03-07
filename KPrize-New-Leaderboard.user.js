@@ -42,10 +42,14 @@ function updateLeaderboard() {
     list = document.querySelector('#site-content > div:nth-child(2) > div > div > div.sc-hxIGLx.hjmoty > div:nth-child(5) > ul')
     totalrows = list.querySelectorAll('li')
 
-    for (let i = 0; i < totalrows.length; i++) {
+    for (let i = 1; i < totalrows.length; i++) {
         try {
             row = totalrows[i]
-            if (row.firstChild.childElementCount!=6)continue
+            if (row.firstChild.childElementCount!=6){
+              row.querySelector('span:nth-child(5)').remove();
+              row.querySelector('span:nth-child(5)').remove();
+              row.querySelector('span:nth-child(5)').remove();
+            }
             score= row.querySelector('span:nth-child(4)').innerText
 
             data= calculateResults(score)[0]
@@ -66,7 +70,7 @@ window.addEventListener('load', function() {
 
   document.addEventListener('keydown', function(event) {
       if (event.altKey && event.key === 'u') {
-        console.log('Leaderboard updated');
+        console.log('Updating Leaderboard...');
         updateLeaderboard();
       }
     });
